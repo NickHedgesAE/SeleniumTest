@@ -21,7 +21,7 @@ public class BuildingchangeTest
     [SetUp]
     public void SetUp()
     {
-        driver = new ChromeDriver("D:\\Werk\\");
+        driver = new ChromeDriver();
         js = (IJavaScriptExecutor)driver;
         vars = new Dictionary<string, object>();
     }
