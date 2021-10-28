@@ -12,6 +12,8 @@ using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Support.UI;
 using OpenQA.Selenium.Interactions;
 using NUnit.Framework;
+using WebDriverManager;
+using WebDriverManager.DriverConfigs.Impl;
 [TestFixture]
 public class BuildingchangeTest
 {
@@ -21,6 +23,7 @@ public class BuildingchangeTest
     [SetUp]
     public void SetUp()
     {
+        new DriverManager().SetUpDriver(new ChromeConfig());
         driver = new ChromeDriver();
         js = (IJavaScriptExecutor)driver;
         vars = new Dictionary<string, object>();
